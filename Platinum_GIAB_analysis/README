@@ -1,1 +1,2 @@
-
+Individual VCF files are splited by chromosome with "java -jar SnpSift.jar split "
+Then each chromosome VCF file of each individual were run with exmaple code provided. 
