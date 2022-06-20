@@ -1,2 +1,2 @@
 # VarSCAT-analysis
-VarsSCAT analysis scripts
+Scripts for biologicl analysis of Wang et al. VarSCAT: Variant Sequence Context Analysis Toolkit.
