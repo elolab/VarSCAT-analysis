@@ -1,0 +1,11 @@
+01_create_TR_tag_AF_ID.R --> read VarSCAT results and tag each indel as TR SNP, DEL, INS and non-TR SNP,DEL,INS. Merge AF results and give each indel a ID
+
+02_generate_population_AF_file.R --> TR and non-TR variant AF list of superpopulation and whole population  
+
+/03_TR_proportion/perfect/
+input is split sample_list.txt into 10 sub-files (split -n10 -d sample_list.txt sample)
+Run with parallel GP_combine.sh
+03_sample_level_counts_TR_non_TR.R --> calculate the counts of TR SNP,DEL,INS and non-TR SNP,DEL,INS
+output is 10 sub-files
+
+04_common_list.R --> generate TR_list and non_TR_list, to create Venndiagram
