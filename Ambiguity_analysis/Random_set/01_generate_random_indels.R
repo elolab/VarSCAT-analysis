@@ -3,7 +3,7 @@ chr_name <- c("1","2","3","4","5","6","7","8","9","10","11","12","13","14","15",
 Indels_set <- vector()
 for (i in 1:length(chr_name))
 {
-  file_name <- paste0("/Platinum/NA12878/05_03_2022_chr",i,"_p.txt")
+  file_name <- paste0("~/VarSCAT_analysis/Platinum_GIAB_analysis/Platinum/NA12878/VarSCAT_chr",i,".txt")
   Indel_results <- read.table(file_name,header = T,sep = "\t",quote=NULL)
   Indel_results <- Indel_results[nchar(as.character(Indel_results[,3]))!=nchar(as.character(Indel_results[,4])),]
   Indel_length <- nchar(as.character(Indel_results[,3]))-nchar(as.character(Indel_results[,4]))
