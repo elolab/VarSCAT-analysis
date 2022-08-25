@@ -67,5 +67,5 @@ for (j in 1:dim(index_file)[1])
 }
 results_df <- cbind(results_df,results_af,results_ID)
 colnames(results_df) <- c("p",colnames(results_af))
-output_name <- paste0(output_path,"/chr","X","_results_df_2.txt")
+output_name <- paste0(output_path,"/chr","X","_results_df.txt")
 write.table(results_df,output_name,quote = F,sep = "\t",row.names = F,col.names = T)
