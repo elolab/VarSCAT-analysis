@@ -1,7 +1,7 @@
 The original data was downloaded from https://www.internationalgenome.org/, http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000_genomes_project/release/20190312_biallelic_SNV_and_INDEL/
 
 Under each per-chromosome folder, it should contain the original VCF file of that chromosome
-1. Break the per chromosome coordination (GRCh38) onto sub-regions (*_index)
+1. Break the per chromosome coordination (hg38, UCSC Genome Browser) onto sub-regions (*_index)
 2. Ran Exract_AF.sh and parallel_chr*_extract_sample_GP.sh to extract allele frequency and genotype of each variant from original VCF file. 
 3. Ran No_GP_VCF_index_chr1.sh to create VCF file without genotype columns to reduce the memory intake of inputs 
 4. Ran VarSCAT_parallel_chr1_run.sh to get annotation results from VarSCAT
