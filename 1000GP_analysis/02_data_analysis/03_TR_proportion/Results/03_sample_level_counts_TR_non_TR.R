@@ -28,8 +28,8 @@ for (sample in sample_list)
   NON_TR_INS <- 0
   for (i in 1:length(chromosome_list))
   {
-	#The genotype data we generated is huge, hard to put them into this repo
-	#With the codes in under /01_data_process/VarSCAT_results/chr*/parallel_chr*_extract_sample_GP.sh, the results shoube be reproduced
+    #The genotype data we generated is huge, hard to put them into this repo
+    #With the codes in under /01_data_process/VarSCAT_results/chr*/parallel_chr*_extract_sample_GP.sh, the results shoube be reproduced
     location <- paste0("~/VarSCAT_analysis/1000GP_analysis/01_data_process/",chromosome_list[i],"/GP/")
     
     file_GP <- paste0(location,sample,".txt")
