@@ -1,4 +1,0 @@
-/bcftools-1.5/bcftools view -s HG00096 /1000GP/chr1/ALL.chr1.shapeit2_integrated_snvindels_v2a_27022019.GRCh38.phased.vcf.gz| /bcftools-1.5/bcftools query -f '[%GT\n]' -o ./GP/HG00096.txt
-/bcftools-1.5/bcftools view -s HG00097 /1000GP/chr1/ALL.chr1.shapeit2_integrated_snvindels_v2a_27022019.GRCh38.phased.vcf.gz| /bcftools-1.5/bcftools query -f '[%GT\n]' -o ./GP/HG00097.txt
-/bcftools-1.5/bcftools view -s HG00098 /1000GP/chr1/ALL.chr1.shapeit2_integrated_snvindels_v2a_27022019.GRCh38.phased.vcf.gz| /bcftools-1.5/bcftools query -f '[%GT\n]' -o ./GP/HG00098.txt
-/bcftools-1.5/bcftools view -s HG00099 /1000GP/chr1/ALL.chr1.shapeit2_integrated_snvindels_v2a_27022019.GRCh38.phased.vcf.gz| /bcftools-1.5/bcftools query -f '[%GT\n]' -o ./GP/HG00099.txt
