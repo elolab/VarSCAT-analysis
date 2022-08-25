@@ -4,7 +4,7 @@
 
 /03_TR_proportion/perfect/
 input is split sample_list.txt into 10 sub-files (split -n10 -d sample_list.txt sample)
-Run with parallel GP_combine.sh
+Run with parallel run_combine.sh
 03_sample_level_counts_TR_non_TR.R --> calculate the counts of TR SNP,DEL,INS and non-TR SNP,DEL,INS
 output is 10 sub-files
 
