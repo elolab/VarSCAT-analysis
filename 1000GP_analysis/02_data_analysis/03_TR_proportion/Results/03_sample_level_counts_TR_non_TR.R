@@ -10,7 +10,7 @@ for (i in 1:length(chromosome_list))
 {
   print(i)
   variant_file <- paste0("~/VarSCAT_analysis/1000GP_analysis/02_data_analysis/01_TR_Tag/",
-                         chromosome_list[i],"_results_df_2.txt")
+                         chromosome_list[i],"_results_df.txt")
   variant_category <- read.table(variant_file,header = T)
   variant_category_list <- append(variant_category_list,list(variant_category[,1]))
   rm(variant_category)
