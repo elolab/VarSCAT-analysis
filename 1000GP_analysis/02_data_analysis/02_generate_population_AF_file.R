@@ -5,7 +5,7 @@ for (i in chromosome_list)
 {
   print(i)
   common_path <- paste0("./01_TR_Tag")
-  chr_result_name <- paste0(common_path,"/chr",i,"_results_df_2.txt")
+  chr_result_name <- paste0(common_path,"/chr",i,"_results_df.txt")
   chr_result <- read.table(chr_result_name,header = T,sep = "\t")
   repeat_af <- chr_result[chr_result[,1]==4|chr_result[,1]==5|chr_result[,1]==6,c(1,2,3,4,5,6,7)]
   non_repeat_af <- chr_result[chr_result[,1]==1|chr_result[,1]==2|chr_result[,1]==3,c(1,2,3,4,5,6,7)]
