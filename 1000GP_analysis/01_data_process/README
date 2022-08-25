@@ -8,4 +8,3 @@ Under each per-chromosome folder, it should contain the original VCF file of tha
 5. The "per-sub-region" files will be combine back to "the-whole-chromosome" in following analysis sections
 
 The genotype data we generated is huge, hard to put them into this repo. With the codes in under /01_data_process/VarSCAT_results/chr*/parallel_chr*_extract_sample_GP.sh, the results shoube be reproduced
-Due to Github can not hold large files, the more details analysis codes can be found at DOI:10.5281/zenodo.7018364
