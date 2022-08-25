@@ -6,10 +6,3 @@
 * The 2548 human individual biallelic SNP+INDEL GRCh38 call sets from 1000 Genomes Porject (https://www.internationalgenome.org/, http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000_genomes_project/release/20190312_biallelic_SNV_and_INDEL/)
 * ClinVar database GRCh38 (https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/weekly/, date: 2022/01/09)<br/>
 #### The source code and document of VarSCAT are available at: https://github.com/elolab/VarSCAT ####
-
-Due to Github can not hold large files, the more details analysis codes can be found at DOI:10.5281/zenodo.7018364
-
-
-
-
- 
