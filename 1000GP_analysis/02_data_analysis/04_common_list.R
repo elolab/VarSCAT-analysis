@@ -12,7 +12,7 @@ SAS_non_TR_P <- vector()
 for (item in chromosome_list)
 {
   print(item)
-  file_open_name <- paste0("./01_TR_Tag/","chr",item,"_results_df_2.txt")
+  file_open_name <- paste0("./01_TR_Tag/","chr",item,"_results_df.txt")
   file_open <- read.table(file_open_name,header = T,sep = "\t")
   file_common <- file_open[file_open[,2]!=0|file_open[,3]!=0|file_open[,4]!=0|
                              file_open[,5]!=0|file_open[,6]!=0|file_open[,7]!=0,]
