@@ -7,7 +7,7 @@
 * ClinVar database GRCh38 (https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/weekly/, date: 2022/01/09)<br/>
 #### The source code and document of VarSCAT are available at: https://github.com/elolab/VarSCAT ####
 
-
+Due to Github can not hold large files, the more details analysis codes can be found at DOI:10.5281/zenodo.7018364
 
 
 
