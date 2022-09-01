@@ -1,7 +1,7 @@
 library("readxl")
 library(ggplot2)
 # http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/working/20130606_sample_info/
-sample_population <- read_excel("E:/VarSCAT/Github_Zenodo/VarSCAT-analysis-main/1000GP_analysis/01_data_process/20130606_sample_info.xlsx")
+sample_population <- read_excel("/01_data_process/20130606_sample_info.xlsx")
 sample_population <- as.data.frame(sample_population[,c(1,3)])
 sample_list <- read.table("./03_TR_proportion/sample_list.txt",header = F)
 sample_list <- sample_list[,1]
