@@ -1,3 +1,1 @@
 Original VCF files was downloaded from GIAB (https://www.nist.gov/programs-projects/genome-bottle, https://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/) and Platinum Genome (https://www.illumina.com/platinumgenomes.html, https://github.com/Illumina/PlatinumGenomes/blob/master/files/2017-1.0.files)
-
-Individual VCF files are splited by chromosome with "java -jar SnpSift.jar split "
