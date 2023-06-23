@@ -5,4 +5,4 @@
 #SBATCH --error ClinVar_12_1.ambiguity_whole.Errors.txt
 #SBATCH --job-name Clin_whole
 
-python3 VarSCAT.py -A --vcf clinvar_20220109_no_scaffold.vcf --reference Homo_sapiens.GRCh38.dna.primary_assembly.fa --LRP 1 --HGVS 1 --flank 1 --adjacent 1--output ambiguity_ClinVar_whole
+python3 VarSCAT.py -A --vcf clinvar_20220109_no_scaffold.vcf --reference Homo_sapiens.GRCh38.dna.primary_assembly.fa --LRP 1 --HGVS 1 --flank 1 --neighbor 1 --output ambiguity_ClinVar_whole
