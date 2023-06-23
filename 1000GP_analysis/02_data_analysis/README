@@ -1,4 +1,4 @@
-Due to tle fize size limitation, we only keep scripts here. Intermediate files can be found on our Zenodo page.
+Due to the fize size limitation, we only keep scripts here. Intermediate files can be found on our Zenodo page.
 
 01_create_TR_tag_AF_ID.R --> read VarSCAT results and tag each indel as TR SNP, DEL, INS and non-TR SNP,DEL,INS. Merge AF results and give each indel a ID
 
