@@ -6,5 +6,6 @@ Under each per-chromosome folder, it should contain the original VCF file of tha
 3. Ran No_GP_VCF_index_chr1.sh to create VCF file without genotype columns to reduce the memory intake of inputs 
 4. Ran VarSCAT_parallel_chr1_run.sh to get annotation results from VarSCAT
 5. The "per-sub-region" files will be combine back to "the-whole-chromosome" in following analysis sections
+Note: in our revision, VarSCAT was not ran with parallel because of better computational resource. 
 
 The genotype data we generated is huge, hard to put them into this repo. With the codes in under /01_data_process/VarSCAT_results/chr*/parallel_chr*_extract_sample_GP.sh, the results shoube be reproduced
