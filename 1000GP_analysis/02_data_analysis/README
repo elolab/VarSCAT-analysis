@@ -4,10 +4,6 @@ Due to the fize size limitation, we only keep scripts here. Intermediate files c
 
 02_generate_population_AF_file.R --> TR and non-TR variant AF list of superpopulation and whole population  
 
-/03_TR_proportion/perfect/
-input is split sample_list.txt into 10 sub-files (split -n10 -d sample_list.txt sample)
-Run with parallel run_combine.sh
-03_sample_level_counts_TR_non_TR.R --> calculate the counts of TR SNP,DEL,INS and non-TR SNP,DEL,INS
-output is 10 sub-files
+/03_TR_proportion/perfect/03_sample_level_counts_TR_non_TR.R --> calculate the counts of TR SNP,DEL,INS and non-TR SNP,DEL,INS
 
 04_common_list.R --> generate TR_list and non_TR_list, to create Venndiagram
