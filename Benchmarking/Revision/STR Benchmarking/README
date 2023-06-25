@@ -1,2 +1,3 @@
 This folder are scripts and some of data for VarSCAT STR benchmarking.
+Chromosome 1 VCF file is produced by spliting original VCF with "java -jar SnpSift.jar split "
 Some of scripts may look like missing, because I ran this on terminal. But the detailed description can be found in our manuscript.
