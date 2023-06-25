@@ -1,1 +1,4 @@
-
+The original VCF files were first fileter and only kept indels. ()
+The normalized VCF for UPS-indel were produced by: 
+    gatk LeftAlignAndTrimVariants --split-multi-allelics
+    vt normalize
