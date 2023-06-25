@@ -1,6 +1,6 @@
 # VarSCAT-analysis
 ## Scripts of biological analysis of Wang et al. VarSCAT: A computational tool for sequence context annotations of genomic variants.<br/> ## 
-## Some folders may have a "Revision" folder inside, which contain scripts that for our manuscript revision. These should be scripts that for our final version of manuscript.<br/> ##
+Some folders may have a "Revision" folder inside, which contain scripts that for our manuscript revision. These should be scripts that for our final version of manuscript.<br/>
 ### The data used in manuscript are: <br/> ###
 * Platinum Genome, hg38 small variant of NA12877 and NA12878 (https://www.illumina.com/platinumgenomes.html, https://github.com/Illumina/PlatinumGenomes/blob/master/files/2017-1.0.files)<br/>
 * Genome in a Bottle, GRCh38 small variants in more difficult regions v4.2.1 of HG002-HG007 (https://www.nist.gov/programs-projects/genome-bottle, https://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/)<br/>
