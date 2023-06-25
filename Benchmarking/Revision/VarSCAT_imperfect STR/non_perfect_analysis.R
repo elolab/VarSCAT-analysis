@@ -105,10 +105,8 @@ p <- ggplot(VarSCAT_region, aes(x=match, y=as.numeric(as.character(VarSCAT_regio
     panel.grid.minor = element_line(colour="gray", size=0.5)) 
 p <- p + annotate("text", x = 1:2, y = c(median(as.numeric(as.character(VarSCAT_region[VarSCAT_region[,1]=="100% match",2])))+2,
                                          median(as.numeric(as.character(VarSCAT_region[VarSCAT_region[,1]=="90% match",2])))+2),
-                                         #median(as.numeric(as.character(VarSCAT_region[VarSCAT_region[,1]=="80% match",2])))+2),
                   label = c(round(mean(as.numeric(as.character(VarSCAT_region[VarSCAT_region[,1]=="100% match",2]))), digits = 2),
                             round(mean(as.numeric(as.character(VarSCAT_region[VarSCAT_region[,1]=="90% match",2]))), digits = 2)),
-                            #round(mean(as.numeric(as.character(VarSCAT_region[VarSCAT_region[,1]=="80% match",2]))), digits = 2)),
                   size=7)
 tiff("WG_VarSCAT_region_100_90.tiff",width = 450,height = 550)
 print(p)
