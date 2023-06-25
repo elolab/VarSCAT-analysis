@@ -14,7 +14,7 @@ if test -f ~/.Renviron; then
 fi
 
 # Specify a temp folder path
-echo "TMPDIR=/scratch/project_2005545" >> ~/.Renviron
+echo "TMPDIR=/scratch/project" >> ~/.Renviron
 
 # Run the R script
 srun apptainer_wrapper exec Rscript --no-save 03_sample_level_counts_TR_non_TR.R
