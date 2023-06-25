@@ -1,0 +1,29 @@
+
+VCFtools - 0.1.17
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf HG002_GRCh37_1_22_v4.2.1_benchmark.vcf
+	--recode-INFO-all
+	--keep-only-indels
+	--out HG002.GRCh37.indel
+	--recode
+
+Warning: Expected at least 2 parts in FILTER entry: ID=discordanthet,Description="Filtered calls where a passing call is het and a high GQ but filtered call is hom var, since often the het is wrong">
+Warning: Expected at least 2 parts in INFO entry: ID=DPSum,Number=1,Type=Integer,Description="Total read depth summed across all datasets, excluding MQ0 reads">
+Warning: Expected at least 2 parts in INFO entry: ID=platforms,Number=1,Type=Integer,Description="Number of different platforms for which at least one callset called this genotype, whether filtered or not">
+Warning: Expected at least 2 parts in INFO entry: ID=platformnames,Number=.,Type=String,Description="Names of platforms for which at least one callset called this genotype, whether filtered or not">
+Warning: Expected at least 2 parts in INFO entry: ID=platformbias,Number=.,Type=String,Description="Names of platforms that have reads containing a variant at this location, but the high-confidence call is homozygous reference, indicating that there is a potential bias.">
+Warning: Expected at least 2 parts in INFO entry: ID=platformbias,Number=.,Type=String,Description="Names of platforms that have reads containing a variant at this location, but the high-confidence call is homozygous reference, indicating that there is a potential bias.">
+Warning: Expected at least 2 parts in INFO entry: ID=datasets,Number=1,Type=Integer,Description="Number of different datasets for which at least one callset called this genotype, whether filtered or not">
+Warning: Expected at least 2 parts in INFO entry: ID=datasetnames,Number=.,Type=String,Description="Names of datasets for which at least one callset called this genotype, whether filtered or not">
+Warning: Expected at least 2 parts in INFO entry: ID=datasetsmissingcall,Number=.,Type=String,Description="Names of datasets that are missing a call or have an incorrect call at this location, and the high-confidence call is a variant">
+Warning: Expected at least 2 parts in INFO entry: ID=callsets,Number=1,Type=Integer,Description="Number of different callsets that called this genotype, whether filtered or not">
+Warning: Expected at least 2 parts in INFO entry: ID=callsetnames,Number=.,Type=String,Description="Names of callsets that called this genotype, whether filtered or not">
+Warning: Expected at least 2 parts in FORMAT entry: ID=DP,Number=1,Type=Integer,Description="Total read depth summed across all datasets, excluding MQ0 reads">
+Warning: Expected at least 2 parts in FORMAT entry: ID=GQ,Number=1,Type=Integer,Description="Net Genotype quality across all datasets, calculated from GQ scores of callsets supporting the consensus GT, using only one callset from each dataset">
+Warning: Expected at least 2 parts in FORMAT entry: ID=GQ,Number=1,Type=Integer,Description="Net Genotype quality across all datasets, calculated from GQ scores of callsets supporting the consensus GT, using only one callset from each dataset">
+After filtering, kept 1 out of 1 Individuals
+Outputting VCF file...
+After filtering, kept 585850 out of a possible 4033796 Sites
+Run Time = 58.00 seconds
