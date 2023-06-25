@@ -1,5 +1,11 @@
 Indel calling results of GATK and VarScan can be found in our previous article: Wang N, Lysenkov V, Orte K, Kairisto V, Aakko J, Khan S, et al. (2022) Tool evaluation for the detection of variably sized indels from next generation whole genome and targeted sequencing data. PLoS Comput Biol 18(2): e1009269. https://doi.org/10.1371/journal.pcbi.1009269
 
+The truth set can be found on GIAB website: https://ftp-trace.ncbi.nlm.nih.gov/ReferenceSamples/giab/release/AshkenazimTrio/HG002_NA24385_son/NISTv4.2.1/GRCh37/
+The truth set was filtered first, only keep indels.
+
 Details of evaluating indel calling results using hap.py
 "version": "v0.3.8-17-gf15de4a", "id": "haplotypes", "module": "hap.py", "description": "/opt/hap.py/bin/hap.py generated this JSON file via command line /opt/hap.py/bin/hap.py HG002.GRCh37.indel.recode.vcf GATK.indel.recode.vcf -o GATK_whole -f HG002_GRCh37_1_22_v4.2.1_benchmark_noinconsistent.bed -T exome-target-region.bed.gz -r hs37d5.fa -V -X"
 "version": "v0.3.8-17-gf15de4a", "id": "haplotypes", "module": "hap.py", "description": "/opt/hap.py/bin/hap.py generated this JSON file via command line /opt/hap.py/bin/hap.py HG002.GRCh37.indel.recode.vcf varscan_indel.vcf -o varscan_whole -f HG002_GRCh37_1_22_v4.2.1_benchmark_noinconsistent.bed -T exome-target-region.bed.gz -r hs37d5.fa -V -X"
+
+Indels with TP,FP,FN labels were fetch by create_FP_FN.R
+VarSCAT was running with -T default parameters for annotating perfect STRs.
