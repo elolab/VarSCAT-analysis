@@ -18,8 +18,6 @@ UPS.indel[nchar(as.character(UPS.indel[,3]))<nchar(as.character(UPS.indel[,4])),
 rownames(UPS.indel) <- NULL
 ID_UPS <- paste(as.character(UPS.indel[,1]),as.character(UPS.indel[,2]), #as.character(UPS.indel[,3]),as.character(UPS.indel[,4]),
                 as.character(UPS.indel[,6]),as.character(UPS.indel[,7]))
-ID_vt_UPS <- paste(as.character(vt_UPS.indel[,1]),as.character(vt_UPS.indel[,2]),# as.character(vt_UPS.indel[,3]),as.character(vt_UPS.indel[,4]),
-                   as.character(vt_UPS.indel[,6]),as.character(vt_UPS.indel[,7]))
 ID_UPS[duplicated(ID_UPS)] <- paste(ID_UPS[duplicated(ID_UPS)],"_",sep = "")
 
 
@@ -32,24 +30,6 @@ ID_VarSCAT <- paste(as.character(VarSCAT.indel[,1]),as.character(VarSCAT.indel[,
                     as.character(VarSCAT.indel[,6]),as.character(VarSCAT.indel[,7]))
 ID_VarSCAT[duplicated(ID_VarSCAT)] <- paste(ID_VarSCAT[duplicated(ID_VarSCAT)],"_",sep = "")
 
-vt_UPS_name <- paste("./normalized_UPS_",sample,".uvcf",sep = "")
-vt_UPS.indel <- read.table(vt_UPS_name,sep = "\t")
-vt_UPS.indel <- vt_UPS.indel[,c(1,2,4,5,8)]
-vt_UPS.indel <- vt_UPS.indel[!grepl("N",as.character(vt_UPS.indel[,5])),]
-vt_UPS.indel <- vt_UPS.indel[!(as.character(vt_UPS.indel[,4])=="*"),]
-vt_ups.corrdination <- strsplit(as.character(vt_UPS.indel[,5])," - ")
-vt_ups.left <- unlist(lapply(vt_ups.corrdination, `[[`, 1))
-vt_ups.left <- substr(vt_ups.left,2,nchar(vt_ups.left))
-vt_ups.left <- parse_number(vt_ups.left)
-vt_ups.right <- unlist(lapply(vt_ups.corrdination, `[[`, 2))
-vt_ups.right <- parse_number(vt_ups.right)
-vt_UPS.indel <- cbind(vt_UPS.indel,vt_ups.left,vt_ups.right)
-vt_UPS.indel[nchar(as.character(vt_UPS.indel[,3]))<nchar(as.character(vt_UPS.indel[,4])),c(6,7)] <- vt_UPS.indel[nchar(as.character(vt_UPS.indel[,3]))<nchar(as.character(vt_UPS.indel[,4])),c(6,7)]-1
-rownames(vt_UPS.indel) <- NULL
-ID_vt_UPS <- paste(as.character(vt_UPS.indel[,1]),as.character(vt_UPS.indel[,2]),# as.character(vt_UPS.indel[,3]),as.character(vt_UPS.indel[,4]),
-                   as.character(vt_UPS.indel[,6]),as.character(vt_UPS.indel[,7]))
-ID_vt_UPS[duplicated(ID_vt_UPS)] <- paste(ID_vt_UPS[duplicated(ID_vt_UPS)],"_",sep = "")
-
 library(ggVennDiagram)
 library(ggplot2)
 z = list("VarSCAT"=sample(ID_VarSCAT),"UPS-indel"=sample(ID_UPS), "UPS-indel(normalized)"=sample(ID_vt_UPS))
@@ -59,21 +39,3 @@ ggVennDiagram(z,label = "count",set_color = "white",set_size = 2,label_alpha=0,l
   scale_fill_gradient(low = "#F4FAFE", high = "#F4FAFE")+
   theme(legend.position = "none")
 dev.off() 
-
-diff_U <- UPS.indel[ID_UPS!=ID_vt_UPS,]
-diff_U <- diff_U[!(duplicated(diff_U[,2])),]
-diff_V <- UPS.indel[ID_vt_UPS!=ID_VarSCAT,]
-output_diff <- cbind(VarSCAT.indel[row.names(VarSCAT.indel) %in% row.names(diff_U),c(1,2,3,4,6,7)],
-                     UPS.indel[row.names(UPS.indel) %in% row.names(diff_U),c(1,2,3,4,6,7)],
-                     vt_UPS.indel[row.names(vt_UPS.indel) %in% row.names(diff_U),c(1,2,3,4,6,7)])
-colnames(output_diff) <- c(rep(c("Chromosome","Position","REF","ALT","5'_align","3'_align"),3))
-output_diff2 <- cbind(VarSCAT.indel[row.names(VarSCAT.indel) %in% row.names(diff_V),c(1,2,3,4,6,7)],
-                      UPS.indel[row.names(UPS.indel) %in% row.names(diff_V),c(1,2,3,4,6,7)],
-                      vt_UPS.indel[row.names(vt_UPS.indel) %in% row.names(diff_V),c(1,2,3,4,6,7)])
-colnames(output_diff2) <- c(rep(c("Chromosome","Position","REF","ALT","5'_align","3'_align"),3))
-output_diff <- rbind(output_diff,output_diff2)
-output_diff[] <- lapply(output_diff, as.character)
-output_diff[,1] <- paste("chr",output_diff[,1],sep = "")
-output_diff[,7] <- paste("chr",output_diff[,7],sep = "")
-output_diff[,13] <- paste("chr",output_diff[,13],sep = "")
-write.table(output_diff,paste(sample,"_v_U.txt"),quote = F, sep = "\t",row.names = F,col.names = TRUE)
