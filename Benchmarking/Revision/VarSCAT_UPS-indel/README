@@ -1,5 +1,3 @@
 The original VCF files were first fileter and only kept indels. (VCFtools - 0.1.17, --recode-INFO-all, --keep-only-indels, --recode)
-The normalized VCF for UPS-indel were produced by: 
-    gatk LeftAlignAndTrimVariants --split-multi-allelics
-    vt normalize
+
 Due to UPS-indel cannot handle file with chromosome string "chr", so we used "awk '{gsub(/\chr/, "")}1'" to manully change the chromosome string.
